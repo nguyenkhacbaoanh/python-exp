@@ -1,4 +1,5 @@
-data = [4,3,1,9,6,5,7,29,2]
+import random
+data = random.sample(range(100),10)
 
 def bubble_sort(list):
 
@@ -17,5 +18,5 @@ def bubble_sort(list):
                 sort_init = True
 
     return print(list)
-
+print(data)
 bubble_sort(data)
