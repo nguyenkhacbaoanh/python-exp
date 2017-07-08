@@ -33,7 +33,7 @@ def capitalize_custom(name, mess):
 
 def message(character, quote):
     A = capitalize_custom(character, quote)
-    return "{} a dit : {}".format(A[0],A[1])
+    return "{} a dit : {}".format(A[0],A[1].strip())
 
 user_answer = input('Tapez entrée pour connaître une autre citation ou B pour quitter le programme.')
 
