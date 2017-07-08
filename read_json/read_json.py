@@ -8,14 +8,14 @@ def get_random_item(object_list):
     item = object_list[rand_numb] # get a quote from a list
     return item # return the item
 
-def capitalize(words):
-    for word in words: 
-        word.capitalize()
+def capitalize_custom(name, mess):
+    name = name.title()
+    mess = message.capitalize()
+    return (name, mess)
 
 def message(character, quote):
-    capitalize(character)
-    capitalize(quote)
-    return "{} a dit : {}".format(character, quote)
+    A = capitalize_custom(character, quote)
+    return "{} a dit : {}".format(A[0],A[1])
 
 user_answer = input('Tapez entrée pour connaître une autre citation ou B pour quitter le programme.')
 
