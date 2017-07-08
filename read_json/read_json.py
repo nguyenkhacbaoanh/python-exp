@@ -4,16 +4,17 @@ import json
 quotes = ["Ecoutez-moi, Monsieur Shakespeare, nous avons beau être ou ne pas être, nous sommes !", "On doit pouvoir choisir entre s'écouter parler et se faire entendre."]
 # characters = ["alvin et les Chipmunks", "Babar", "betty boop", "calimero", "casper", "le chat potté", "Kirikou"]
 
-def read_data_from_json():
+def read_data_from_json(key):
+    key = str(key)
     values = []
-    with open('read_json/characters.json') as f:
+    with open('read_json/' + key + 's.json') as f:
         data = json.load(f)
         for entry in data:
-            values.append(entry['character'])
+            values.append(entry[key])
         return values
 
 def random_characters():
-    characters = read_data_from_json()
+    characters = read_data_from_json('character')
     return get_random_item(characters)
 
 def get_random_item(object_list):
